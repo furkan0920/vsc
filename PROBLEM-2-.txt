@@ -1,0 +1,32 @@
+PROBLEM-2- (Pyramid with stars)
+
+#include <stdio.h>  
+#define CRT_SECURE_NO_WARNINGS //
+
+int main()
+{
+	int n, m = 1;    //report an integer variable
+
+	printf("Enter the number of columns:");  //the number of columns is entered
+
+	scanf_s("%d", &n);  //scanf is put to get input
+
+	for (int i = 1; i <= n; i++)   //i increase one by one from one to n
+	{
+		for (int j = 1; j <= i; j++) //j increase one by one from one to n
+		{
+			printf("*"); //to print stars
+		}
+		printf("\n"); //put stars one under the other
+	}
+	for (int i = n - 1; i >= 1; i--) //i decrease one by one from n-1 to 1
+	{
+		for (int j = 1; j <= i; j++) //j increase one by one from i to 1
+		{
+			printf("*"); 
+		}
+		printf("\n"); 
+	}
+
+	return 0;
+}

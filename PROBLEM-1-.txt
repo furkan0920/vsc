@@ -1,0 +1,30 @@
+#include <stdio.h>
+#define CRT_SECURE_NO_WARNINGS
+void reverseSentence();
+int main() {
+    char ch;  //use to hold ch variable
+print:
+    printf("Please enter the text: ");
+    reverseSentence();
+again:
+    printf("\n"); //to print on the bottom line
+    printf("Do you want to enter a new entry?(Y or N)"); //to enter new try.
+    scanf_s("%c", &ch); //to call the variable of type char
+
+    if (ch == 'Y') { //pop up to ask y or n question
+        goto print;  //to jump from line to line in a loop
+    }
+    else if (ch == 'N') { //if n is written the loop ends.
+        return 0;
+    }
+    return 0;
+}
+
+void reverseSentence() {  //use to show the type of data returned by the function.
+    char c;
+    scanf_s("%c", &c);  //to call the variable of type char
+    if (c != '\n') {  //if not equal to look at 
+        reverseSentence();
+        printf("%c", c); 
+    }
+}

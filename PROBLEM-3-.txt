@@ -1,0 +1,23 @@
+PROBLEM -3- Fibonacci sequence
+
+#include <stdio.h>
+#define CRT_SECURE_NO_WARNINGS
+int main()
+{
+    int i, n, t1 = 0, t2 = 1, nextTerm; //enter integer varities
+
+    printf("Enter the number of terms: "); //the total number of lines is entered
+    scanf_s("%d", &n);  
+    printf("\n");  //to skip a line
+    printf("Fibonacci Sequence:\n");  //written on demand
+
+    for (i = 1; i <= n; ++i) //i increase one by one from one to n
+    {
+        printf("%d, ", t1);  
+        printf("\n");  //to skip a line
+        nextTerm = t1 + t2;
+        t1 = t2;
+        t2 = nextTerm;
+    }
+    return 0;
+}

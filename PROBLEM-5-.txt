@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define CRT_SECURE_NO_WARNINGS
+
+int main(void) {
+
+	int i, number; //to declare integer variable
+
+	printf("Enter a number to learn prime factor of number: "); //to enter the text from user
+	scanf_s("%d", &number);
+
+	for (i = 2; number != 1; i++) {  //to divide from 2 until the result equals 1
+
+		if (number % i == 0) {   // to see if a number is divided by 'i'
+
+			number /= i;  
+			printf("%d  ", i);
+			printf("\n");
+			i--;    //to subtract 1 when the number is equal and continue to divide
+
+		}
+	}
+
+
+	getch();  //to read the reading process without clicking enter
+	return 0;
+}
